@@ -17,8 +17,8 @@
 resource_name :hab_service
 
 property :service_name, String, name_property: true
-property :loaded, [true, false], default: false, desired_state: true
-property :running, [true, false], default: false, desired_state: true
+property :loaded, [true, false], default: false
+property :running, [true, false], default: false
 
 # hab svc options which get included based on the action of the resource
 property :strategy, String
