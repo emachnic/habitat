@@ -10,6 +10,11 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@master
+    - name: Install Dependencies
+      uses: actionshub/chef-delivery@master
+      run: chef gem install toml
+      env:
+        CHEF_LICENSE: accept-no-persist
     - name: Run Chef Delivery
       uses: actionshub/chef-delivery@master
       env:
